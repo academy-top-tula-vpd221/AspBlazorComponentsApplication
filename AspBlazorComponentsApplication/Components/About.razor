@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Components.Web;
+@rendermode RenderMode.InteractiveServer
+
+<h3>@ParentTitle / @title</h3>
+
+<input @bind-value="@name" />
+<h4>@name</h4>
+<button @onclick="fn">Click</button>
+
+@code {
+    [Parameter]
+    public string ParentTitle { set; get; } = "";
+
+    string title = "About component";
+    string name = "hello";
+
+    void fn()
+    {
+        name = "good by";
+    }
+}

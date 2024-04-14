@@ -1,0 +1,19 @@
+﻿@page "/"
+@model AspBlazorComponentsApplication.Pages.HostModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using AspBlazorComponentsApplication.Components
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Host</title>
+    </head>
+    <body>
+        <h1>Page Host</h1>
+        <component type="typeof(App)" render-mode="ServerPrerendered"/>
+    </body>
+</html>
